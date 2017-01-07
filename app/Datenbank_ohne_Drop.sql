@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.1 on Sa Jan 7 16:43:17 2017
+-- File generated with SQLiteStudio v3.1.1 on Sa Jan 7 16:43:59 2017
 --
 -- Text encoding used: System
 --
@@ -7,8 +7,6 @@ PRAGMA foreign_keys = off;
 BEGIN TRANSACTION;
 
 -- Table: Ausstattung
-DROP TABLE IF EXISTS Ausstattung;
-
 CREATE TABLE Ausstattung (
     Ausstattungs_ID INTEGER      PRIMARY KEY AUTOINCREMENT,
     Name            VARCHAR (30) NOT NULL
@@ -25,8 +23,6 @@ INSERT INTO Ausstattung (Ausstattungs_ID, Name) VALUES (8, 'Parkplatz');
 INSERT INTO Ausstattung (Ausstattungs_ID, Name) VALUES (9, 'Haustiere');
 
 -- Table: Hotel
-DROP TABLE IF EXISTS Hotel;
-
 CREATE TABLE Hotel (
     Hotel__id             INTEGER      PRIMARY KEY AUTOINCREMENT,
     Name                  VARCHAR (70) NOT NULL,
@@ -39,8 +35,6 @@ CREATE TABLE Hotel (
 INSERT INTO Hotel (Hotel__id, Name, Sterne, Zimmer_Anzahl, Hotel_Ausstattungs_ID) VALUES (1, 'Asgard Hotel', 3, 63, 1);
 
 -- Table: Hotel_Ausstattung
-DROP TABLE IF EXISTS Hotel_Ausstattung;
-
 CREATE TABLE Hotel_Ausstattung (
     Hotel_id             INTEGER REFERENCES Hotel (Hotel__id),
     Ausstattung_ID       INTEGER REFERENCES Ausstattung (Ausstattungs_ID),
@@ -55,8 +49,6 @@ INSERT INTO Hotel_Ausstattung (Hotel_id, Ausstattung_ID, Hotel_Ausstattung_ID) V
 INSERT INTO Hotel_Ausstattung (Hotel_id, Ausstattung_ID, Hotel_Ausstattung_ID) VALUES (1, 4, 1);
 
 -- Table: Kategorie
-DROP TABLE IF EXISTS Kategorie;
-
 CREATE TABLE Kategorie (
     Kategorie_Id INTEGER      PRIMARY KEY AUTOINCREMENT,
     Name         VARCHAR (30) NOT NULL
@@ -70,8 +62,6 @@ INSERT INTO Kategorie (Kategorie_Id, Name) VALUES (5, 'Honey Moon');
 INSERT INTO Kategorie (Kategorie_Id, Name) VALUES (6, 'Tagungsraum');
 
 -- Table: Kunde
-DROP TABLE IF EXISTS Kunde;
-
 CREATE TABLE Kunde (
     KundenNr INTEGER      PRIMARY KEY AUTOINCREMENT,
     Name     VARCHAR (30) NOT NULL,
@@ -81,8 +71,6 @@ CREATE TABLE Kunde (
 
 
 -- Table: zimmer
-DROP TABLE IF EXISTS zimmer;
-
 CREATE TABLE zimmer (
     Zimmer_ID     INTEGER   PRIMARY KEY AUTOINCREMENT,
     Zimmer_Nummer INT (200) NOT NULL ON CONFLICT FAIL,
