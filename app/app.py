@@ -8,9 +8,28 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
 app = Flask(__name__) # erstell die app-instanz
 app.config.from_object(__name__) #ladet die konfig von einer umgebungsvariable
 
+# Lädt die default-config und überschreibt die umgebungsvariable
 app.config.update(dict(
-    DATABASE=os.path.join(app.root_path, 'Datenbank.sql')
+    # Variable zum verbinden der Datenbank
+    DATABASE=os.path.join(app.root_path, 'Datenbank.sql'), # Variable zum verbinden der Datenbank
+    # wird benötigt und clientseitige sessions zu sichern. Aktuell nur der Entwicklungsschlüssel hinterlegt
+    SECRET_KEY='development key',
+    USERNAME='admin',
+    PASSWORD='default'
 ))
+# festlegen der umgebungsvariable
+app.config.from_envvar('APP_SETTINGS', silent=True)
+
+#methode zur verbindung der Datenbank.
+
+def connect_db():
+    #Verbindung zur Datenbank
+    rv = sqlite3.connect(app.config['DATABASE'])
+    #Aufruf der sqlite3.row funktion dies erlaubt es das die Zeilen der Datenbank als Dictionaries \
+    #anstatt als Tupel verwendet werden.
+    rv.row_factory = sqlite3.Row
+    return rv
+
 
 
 @app.route('/')
