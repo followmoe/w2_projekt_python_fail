@@ -1,0 +1,8 @@
+#Jede besondere Datei die in dieses Package hinzugefügt werden soll wird in diese Mainfest Datei geschrieben.
+#Deswegen werden wir den Template-Ordner und den Static-Ordner hinzufügen.
+
+graft app/templates
+graft app/static
+include app/Datenbank.sql
+
+
