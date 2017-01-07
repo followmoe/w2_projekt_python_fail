@@ -1,17 +1,22 @@
+import os
+import sqlite3
 
-from flask import Flask
+#imports für
+from flask import Flask, request, session, g, redirect, url_for, abort, \
+                render_template, flash
 
-app = Flask(__name__)
+app = Flask(__name__) # erstell die app-instanz
+app.config.from_object(__name__) #ladet die konfig von einer umgebungsvariable
+
+app.config.update(dict(
+    DATABASE=os.path.join(app.root_path, 'Datenbank.sql')
+))
 
 
 @app.route('/')
 def hello_world():
     return 'Hello World!'
 
-
-@app.route('/biba_bastard')
-def biba():
-    return 'Biba kann nix, die alte Fotze!!!!'
-
 if __name__ == '__main__':
     app.run(host='192.168.33.10', port='9999')
+
