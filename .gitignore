@@ -1,2 +1,3 @@
 .idea/dataSources/9e6e6176-cf96-440a-8051-25a566c64d9c/storage.xml
 *.xml
+.idea/*
