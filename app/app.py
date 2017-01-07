@@ -11,8 +11,7 @@ app.config.from_object(__name__) #ladet die konfig von einer umgebungsvariable
 app.config.update(dict(
     DATABASE=os.path.join(app.root_path, 'Datenbank.sql')
 ))
-<<<<<<< HEAD
-=======
+
 # festlegen der umgebungsvariable
 app.config.from_envvar('APP_SETTINGS', silent=True)
 
@@ -25,8 +24,6 @@ def connect_db():
     #anstatt als Tupel verwendet werden.
     rv.row_factory = sqlite3.Row
     return rv
-
->>>>>>> origin/master
 
 
 @app.route('/')
