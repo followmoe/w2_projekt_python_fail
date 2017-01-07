@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+    <meta http-equiv="Content-Type" content="text/html; charset=System"/>
+    <title>Exported database: Datenbank</title>
+    <style type="text/css">
+        table
+        {
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+            border-collapse: collapse;
+        }
+        
+        table tr
+        {
+            background-color: white;
+        }
+        
+        table tr.header
+        {
+            background-color: #DDDDDD;
+        }
+        
+        table tr.title
+        {
+            background-color: #EEEEEE;
+        }
+        
+        table tr td
+        {
+            padding: 0px 3px 0px 3px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #666666;
+        }
+        
+        table tr td.null
+        {
+            color: #999999;
+            text-align: center;
+            padding: 0px 3px 0px 3px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #666666;
+        }
+        
+        table tr td.separator
+        {
+            padding: 0px 3px 0px 3px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #666666;
+            background-color: #DDDDDD;
+        }
+        
+        table tr td.rownum
+        {
+            padding: 0px 3px 0px 3px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #666666;
+            background-color: #DDDDDD;
+            text-align: right;
+        }
+        
+    </style>
+    <body>
+        <table>
+            <tr class="title">
+                <td colspan="3" align="center">Table: Ausstattung</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>Ausstattungs_ID</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Name</b><br/>VARCHAR
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="left">
+                    WLAN
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>2</i>
+                </td>
+                <td align="right">
+                    2
+                </td>
+                <td align="left">
+                    Schwimmbad/Sauna
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="6" align="center">Table: Hotel</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>Hotel__id</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Name</b><br/>VARCHAR
+                </td>
+                <td>
+                    <b>Sterne</b><br/>INT
+                </td>
+                <td>
+                    <b>Zimmer_Anzahl</b><br/>INT
+                </td>
+                <td>
+                    <b>Zimmer_ID</b><br/>INTEGER
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="3" align="center">Table: Hotel_Ausstattung</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>Hotel_id</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Ausstattung_ID</b><br/>INTEGER
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="3" align="center">Table: Kategorie</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>Kategorie_Id</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Name</b><br/>VARCHAR
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="left">
+                    Suite
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>2</i>
+                </td>
+                <td align="right">
+                    2
+                </td>
+                <td align="left">
+                    Doppel Zimmer
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>3</i>
+                </td>
+                <td align="right">
+                    3
+                </td>
+                <td align="left">
+                    Einzel Zimmer
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>4</i>
+                </td>
+                <td align="right">
+                    4
+                </td>
+                <td align="left">
+                    Junior Suite
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>5</i>
+                </td>
+                <td align="right">
+                    5
+                </td>
+                <td align="left">
+                    Honey Moon
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>6</i>
+                </td>
+                <td align="right">
+                    6
+                </td>
+                <td align="left">
+                    Tagungsraum
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="5" align="center">Table: Kunde</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>KundenNr</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Name</b><br/>VARCHAR
+                </td>
+                <td>
+                    <b>Email</b><br/>VARCHAR
+                </td>
+                <td>
+                    <b>Passwort</b><br/>VARCHAR
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <table>
+            <tr class="title">
+                <td colspan="5" align="center">Table: zimmer</td>
+            </tr>
+            <tr class="header">
+                <td align="right">
+                    <b><i>#</i></b>
+                </td>
+                <td>
+                    <b>Zimmer_ID</b><br/>INTEGER
+                </td>
+                <td>
+                    <b>Zimmer_Nummer</b><br/>INT
+                </td>
+                <td>
+                    <b>BettenZahl</b><br/>INT
+                </td>
+                <td>
+                    <b>Kategorie_ID</b><br/>INTEGER
+                </td>
+            </tr>
+            <tr>
+                <td class="rownum">
+                    <i>1</i>
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="right">
+                    1
+                </td>
+                <td align="right">
+                    2
+                </td>
+                <td align="right">
+                    1
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <i>Document generated by SQLiteStudio v3.1.1 on Sa Jan 7 15:04:23 2017</i>
+    </body>
+</html>
