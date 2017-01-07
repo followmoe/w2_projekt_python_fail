@@ -25,7 +25,7 @@ app.config.from_envvar('APP_SETTINGS', silent=True)
 def connect_db():
     #Verbindung zur Datenbank
     rv = sqlite3.connect(app.config['DATABASE'])
-    #Aufruf der sqlite3.row funktion dies erlaubt es das die Zeilen der Datenbank als Dictionaries \
+    #Aufruf der sqlite3.row funktion dies erlaubt es das die Zeilen der Datenbank als Dictionaries
     #anstatt als Tupel verwendet werden.
     rv.row_factory = sqlite3.Row
     return rv
