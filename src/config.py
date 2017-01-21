@@ -1,4 +1,4 @@
-SQLALCHEMY_DATABASE_URI = 'sqlite:///Datenbank.db'
+SQLALCHEMY_DATABASE_URI = 'sqlite3:///Datenbank.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 """

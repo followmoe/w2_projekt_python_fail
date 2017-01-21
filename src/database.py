@@ -1,9 +1,9 @@
-from application import app
+from application.src.run import application
 from flask_login import UserMixin
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask_sqlalchemy import SQLAlchemy
 
-db = SQLAlchemy(app)
+db = SQLAlchemy(application)
 
 class Kunde(db.Model, UserMixin):
     __tablename__ = 'Kunde'
