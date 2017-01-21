@@ -1,5 +1,5 @@
 --
--- File generated with the Brain by the Mastermind Tim Biba
+-- File generated with SQLiteStudio v3.1.1 on Sa Jan 7 18:37:46 2017
 --
 -- Text encoding used: System
 --
