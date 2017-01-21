@@ -1,4 +1,4 @@
-from app import app
+from application import app
 from flask import Flask
 
 if __name__ == '__main__':

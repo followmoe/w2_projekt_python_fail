@@ -12,4 +12,3 @@ app=create_app()
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-from app.app.src.
