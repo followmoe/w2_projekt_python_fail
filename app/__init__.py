@@ -1,6 +1,19 @@
-#Um ein Package bilden zu können benötigen wir eine __init__.py damit Python
-#,dass wir ein Package bilden möchten.
+from flask import Flask
+from flask_login import LoginManager
 
 
-#diese Anweisung bring die App-Instanz auf die höchste Ebene des Packetes.
-from .app import app
+def create_app():
+    app=Flask(__name__)
+
+    app.config.from_pyfile('config.py')
+    return app
+
+
+app=create_app()
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+
+from app.routes import *
+from app.config import *
+from app.database import *
